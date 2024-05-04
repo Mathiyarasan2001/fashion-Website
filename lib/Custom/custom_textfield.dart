@@ -5,9 +5,12 @@ class textfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.sizeOf(context).height;
+    final Width = MediaQuery.sizeOf(context).width;
+    final text = (Height + Width) / 100;
     return SizedBox(
-      height: 44,
-      width: 221,
+      height: Height / 15,
+      width: Width / 7,
       child: TextField(
         decoration: InputDecoration(
             hintText: "search something here",

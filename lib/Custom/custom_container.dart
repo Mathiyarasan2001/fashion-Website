@@ -14,14 +14,18 @@ class custom_container extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.sizeOf(context).height;
+    final Width = MediaQuery.sizeOf(context).width;
+    final text1 = (Height + Width) / 100;
+    final text2 = (Height + Width) / 100;
     return Container(
-      height: MediaQuery.sizeOf(context).height/1,
-      width: MediaQuery.sizeOf(context).width/4,
+      height: MediaQuery.sizeOf(context).height / 1.1,
+      width: MediaQuery.sizeOf(context).width / 4,
       child: Column(
         children: [
           Container(
-            height: 528,
-            width: 363,
+            height: Height / 1.5,
+            width: Width / 4,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
@@ -30,12 +34,12 @@ class custom_container extends StatelessWidget {
           ListTile(
             title: Poppins(
                 text: title,
-                size: 24,
+                size: text1,
                 color: Colors.black,
                 weight: FontWeight.w700),
             subtitle: Poppins(
                 text: subtitle,
-                size: 18,
+                size: text2,
                 color: Colors.black,
                 weight: FontWeight.w500),
             trailing: IconButton(
